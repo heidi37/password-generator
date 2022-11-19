@@ -2,13 +2,23 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 "/"];
 
 let btn = document.querySelector('.btn')
-
+let clearBtn = document.getElementById('btn-clear')
 let firstPass = document.getElementById('firstPassword')
 let secondPass = document.getElementById('secondPassword')
 
+let isClicked = false
 
 btn.addEventListener("click", function () {
-  generatePasswords()
+  if (isClicked === false) {
+    generatePasswords()
+    isClicked = true
+}
+ })
+
+ clearBtn.addEventListener("click", function (){
+    firstPass.textContent = ''
+    secondPass.textContent = ''
+    isClicked = false
  })
  
  function generatePasswords() {

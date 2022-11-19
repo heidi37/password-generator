@@ -77,3 +77,13 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
+
+#btn-clear {
+    background: rgb(149, 25, 25);
+}
+
+#btn-clear:hover {
+    background: rgb(85, 10, 10);
+}
+
+
